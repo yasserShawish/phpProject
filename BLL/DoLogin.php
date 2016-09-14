@@ -18,7 +18,7 @@ class DoLogin {
     var $username ;
     function __construct($userLogin) {
 
-/* this is ahmad just for testing */
+
         $valid = $this->checkLoginInfo($userLogin);
 
         if ($valid) {
