@@ -13,8 +13,8 @@
  */
     
    $host = "localhost";
-   $password = "password";
+   $password = "ahmadPass";
    $user = "root";
-   $database = "ecommercedb";
+   $database = "ahmadTest";
   
 

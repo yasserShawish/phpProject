@@ -21,19 +21,19 @@ class AccessDatabase {
 
     function __construct($filename) {
 
-        if (is_file($filename))
-            include "DBConstant.php";
-        else
-            throw new Exception("Can't Connect DB {constractor AccessDatabase.php}");
+        //if (is_file($filename))
+         //   include "DBConstant.php";
+       // else
+       //     throw new Exception("Can't Connect DB {constractor AccessDatabase.php}");
 
-        $this->databaseName = $database;
-        $this->host = $host;
-        $this->password = $password;
-        $this->username = $user;
+        $this->databaseName = "ahmadTest";
+        $this->host = "localhost";
+        $this->password = "ahmadPass";
+        $this->username = "root";
     }
 
     private function connect() {
-        $this->con = mysqli_connect($this->host, $this->username, $this->password, $this->databaseName);
+        $this->con = mysqli_connect("localhost", "root", "", "ahmadTest");
 
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -48,7 +48,7 @@ class AccessDatabase {
 
     public function executeQuery($cmd) {
         $this->connect();
-
+        
         if (!( $result = mysqli_query($this->con, $cmd) )) {
             print( "Could not execute query! <br />");
             die(mysqli_error());
