@@ -27,13 +27,7 @@
             <li class = "check"><a href = "checkout.php">Checkout</a></li>
             <div class = 'clearfix'></div>
         </ul>
-        <div class = "search">
-            <input type = "text" value = "Search" onfocus = "this.value = '';" onblur = "if (this.value == '') {
-                            this.value = 'Search';
-                        }">
-            <input type = "submit" value = "">
-        </div>
-   
+ 
     <?php
 } else {
     ?>
@@ -44,13 +38,6 @@
     <li class = "wish"><a href = "../Account/register.php">Register</a></li>
     <div class = 'clearfix'></div>
     </ul>       
-
-    <div class = "search">
-        <input type = "text" value = "Search" onfocus = "this.value = '';" onblur = "if (this.value == '') {
-                            this.value = 'Search';
-                        }">
-        <input type = "submit" value = "">
-    </div>
     
     <?php
 }
