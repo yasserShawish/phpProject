@@ -21,15 +21,15 @@ class AccessDatabase {
 
     function __construct($filename) {
 
-        //if (is_file($filename))
-         //   include "DBConstant.php";
-       // else
-       //     throw new Exception("Can't Connect DB {constractor AccessDatabase.php}");
+        if (is_file($filename))
+            include "DBConstant.php";
+        else
+            throw new Exception("Can't Connect DB {constractor AccessDatabase.php}");
 
-        $this->databaseName = "ahmadTest";
-        $this->host = "localhost";
-        $this->password = "ahmadPass";
-        $this->username = "root";
+        $this->databaseName = $database;
+        $this->host = $host;
+        $this->password = $password;
+        $this->username = $user;
     }
 
     private function connect() {
