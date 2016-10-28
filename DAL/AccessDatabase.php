@@ -48,7 +48,7 @@ class AccessDatabase {
 
     public function executeQuery($cmd) {
         $this->connect();
-
+        echo $cmd."HII<br>";
         if (!( $result = mysqli_query($this->con, $cmd) )) {
             print( "Could not execute query! <br />");
             die(mysqli_error());

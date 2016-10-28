@@ -128,8 +128,8 @@ if (isset($_SESSION['username'])) {
                                     <p>If you have an account with us, please log in.</p>
                                     <form action="../../Controller/LoginController.php" method="post">
                                         <div>
-                                            <span>User Name<label>*</label></span>
-                                            <input type="text" name="username"> 
+                                            <span>Email<label>*</label></span>
+                                            <input type="text" name="email"> 
                                         </div>
                                         <div>
                                             <span>Password<label>*</label></span>

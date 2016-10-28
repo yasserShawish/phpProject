@@ -13,20 +13,20 @@
  */
 class LoginViewModel {
     
-    var $userName;
+    var $email;
     var $userPassword;
     
-    function __construct($username , $password) {        
-        $this->setUserName($username);
+    function __construct($email , $password) {        
+        $this->setEmail($email);
         $this->setUserPassword($password);
     }
             
-    function getUserName(){
-        return $this->userName;
+    function getEmail(){
+        return $this->email;
     }
     
-    function setUserName($username){
-        $this->userName = $username;
+    function setEmail($email){
+        $this->email = $email;
     }
     
     function getUserPassword(){

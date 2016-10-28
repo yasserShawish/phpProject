@@ -14,7 +14,7 @@ if ($_POST) {
 
     if (isset($_POST['submit']) AND $_POST['submit'] == "Login") {
 
-        $name = $_POST["username"];
+        $name = $_POST["email"];
         $pass = $_POST["password"];
 
         $userLogin = new LoginViewModel($name, $pass);

@@ -40,7 +40,7 @@ class DoLogin {
         $filename = "../../DAL/DBConstant.php";
 
         try {
-            $db_result = (new AccessDatabase($filename))->executeQuery("select  username,email , password from user_info where email = '" . $userLogin->getUserName() . "' and password = '" . $userLogin->getUserPassword() . "';");
+            $db_result = (new AccessDatabase($filename))->executeQuery("select  first_name,email , password from user_info where email = '" . $userLogin->getEmail() . "' and password = '" . $userLogin->getUserPassword() . "';");
             $this->username = mysqli_fetch_row( $db_result )[0];
             
             if (mysqli_num_rows($db_result) == 0) {

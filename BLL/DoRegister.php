@@ -22,7 +22,7 @@ class DoRegister {
        
         if ($success) {
             session_start();
-            $_SESSION['username'] = $userRegister->getEmailAddress();
+            $_SESSION['username'] = $userRegister->getFirstName();
             
             RedirectTo::page("HomeController.php");
         } else
@@ -34,7 +34,7 @@ class DoRegister {
         $filename = "../../DAL/DBConstant.php";
 
         try {
-            (new AccessDatabase($filename))->executeInsertQuery("INSERT INTO user_info(username, password, email) VALUES (CONCAT('" . $userRegister->getFirstName() . "','" . $userRegister->getLastName() . "'),'" . $userRegister->getPassword() . "','" . $userRegister->getEmailAddress() . "');");
+            (new AccessDatabase($filename))->executeInsertQuery("INSERT INTO user_info(first_name,last_name, password, email) VALUES ('" . $userRegister->getFirstName() . "','" . $userRegister->getLastName() . "','" . $userRegister->getPassword() . "','" . $userRegister->getEmailAddress() . "');");
         } catch (Exception $exc) {
             echo $exc->getMessage();
             return false;
