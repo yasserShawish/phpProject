@@ -33,7 +33,7 @@ class AccessDatabase {
     }
 
     private function connect() {
-        $this->con = mysqli_connect($this->host, $this->username, $this->password, $this->databaseName);
+        $this->con = mysqli_connect("localhost", "root", "", "ahmadTest");
 
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -48,7 +48,7 @@ class AccessDatabase {
 
     public function executeQuery($cmd) {
         $this->connect();
-        echo $cmd."HII<br>";
+        
         if (!( $result = mysqli_query($this->con, $cmd) )) {
             print( "Could not execute query! <br />");
             die(mysqli_error());

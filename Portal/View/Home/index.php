@@ -39,7 +39,7 @@ session_start();
         <?php if (!isset($_SESSION['username'])) { ?>
             <style>
 
-             div .banner_right{margin-top: 0em;}
+                div .banner_right{margin-top: 0em;}
 
             </style>
             <?php
@@ -72,6 +72,10 @@ session_start();
                         </div>
                         <div class="clearfix"></div>
                     </div>
+                    <div class="bannertop_box">
+                        <?php include '../Account/loginFragment.php'; ?>  
+                        <?php include '../Search/searchFragment.php'; ?>
+                    </div>
                     <div class="clearfix"></div>
                 </div>  
                 <div class="index-banner">
@@ -80,8 +84,6 @@ session_start();
                             <article style="position: absolute; width: 100%; opacity: 0;"> 
                                 <div class="banner-wrap">
                                     <div class="bannertop_box">			   		 		
-
-                                        <?php include '../Account/loginFragment.php'; ?>                                         
 
                                         <div class="welcome_box">
                                             <!--<h2>Welcome to Surfhouse</h2>-->
@@ -99,7 +101,6 @@ session_start();
                             <article style="position: relative; width: 100%; opacity: 1;"> 
                                 <div class="banner-wrap">
                                     <div class="bannertop_box">
-                                        <?php include '../Account/loginFragment.php'; ?>
                                         <div class="welcome_box">
                                             <h2>Welcome to Surfhouse</h2>
                                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism</p>
@@ -116,7 +117,7 @@ session_start();
                             <article style="position: absolute; width: 100%; opacity: 0;">
                                 <div class="banner-wrap">
                                     <div class="bannertop_box">
-                                        <?php include '../Account/loginFragment.php'; ?>
+
                                         <div class="welcome_box">
                                             <h2>Welcome to Surfhouse</h2>
                                             <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
@@ -140,7 +141,7 @@ session_start();
                     </div>
                     <script src="../../Content/js/jquery.wmuSlider.js"></script> 
                     <script>
-              $('.example1').wmuSlider();
+            $('.example1').wmuSlider();
                     </script> 	           	      
                 </div>
             </div>     
@@ -545,7 +546,8 @@ session_start();
                     <p class="footer_desc">Nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat</p>
                     <div class="search_footer">
                         <input type="text" class="text" value="Insert Email" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                              this.value = 'Insert Email';}">
+                                    this.value = 'Insert Email';
+                                }">
                         <input type="submit" value="Submit">
                     </div>
                     <img src="../../Content/images/payment.png" class="img-responsive" alt=""/>
